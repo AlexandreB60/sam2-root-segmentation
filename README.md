@@ -55,7 +55,7 @@ Run as-is, SAM 2 reaches a median Dice of 0.012 with a point at the centroid of 
 
 ### Adapting still images to a video framework
 
-SAM2 extends SAM to video, and its training framework consumes VOS-style sequences rather than single images: a video is a folder of numbered frames, with one sub-folder of masks per tracked object. `prepare_data` stores each image as a one-frame sequence, without modifying the pixels, and the training configuration samples a single frame and a single object (`num_frames: 1`, `max_num_objects: 1`):
+SAM 2 extends SAM to video, and its training framework consumes VOS-style sequences rather than single images: a video is a folder of numbered frames, with one sub-folder of masks per tracked object. `prepare_data` stores each image as a one-frame sequence, without modifying the pixels, and the training configuration samples a single frame and a single object (`num_frames: 1`, `max_num_objects: 1`):
 
 ```
 prepared_data/
